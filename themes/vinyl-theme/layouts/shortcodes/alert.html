@@ -1,0 +1,22 @@
+{{ $type := .Get "type" | default "info" }}
+{{ $title := .Get "title" | default (title $type) }}
+
+<div class="flex items-center p-4 mb-4 text-sm rounded-lg border {{ if eq $type "danger" }}
+    text-vinyl-coral border-vinyl-coral/30 bg-vinyl-coral/5 dark:bg-vinyl-black dark:text-vinyl-coral dark:border-vinyl-coral/30
+    {{ else if eq $type "success" }}
+    text-emerald-500 border-emerald-500/30 bg-emerald-500/5 dark:bg-vinyl-black dark:text-emerald-400 dark:border-emerald-500/30
+    {{ else if eq $type "warning" }}
+    text-vinyl-orange border-vinyl-orange/30 bg-vinyl-orange/5 dark:bg-vinyl-black dark:text-vinyl-orange dark:border-vinyl-orange/30
+    {{ else if eq $type "dark" }}
+    text-vinyl-black border-vinyl-black/30 bg-vinyl-black/5 dark:bg-vinyl-black dark:text-vinyl-cream dark:border-vinyl-cream/30
+    {{ else }}
+    text-vinyl-blue border-vinyl-blue/30 bg-vinyl-blue/5 dark:bg-vinyl-black dark:text-vinyl-blue dark:border-vinyl-blue/30
+    {{ end }}" role="alert">
+    <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+    </svg>
+    <span class="sr-only">{{ $type }}</span>
+    <div>
+        {{ with $title }}<span class="font-medium">{{ . }}!</span> {{ end }}{{ .Inner | markdownify }}
+    </div>
+</div> 

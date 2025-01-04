@@ -1,0 +1,42 @@
+baseURL = 'https://vinyl-scrobbler.app/'
+languageCode = 'en-BG'
+title = 'Vinyl Scrobbler'
+theme = 'vinyl-theme'
+
+enableRobotsTXT = true
+enableGitInfo = false
+
+[params]
+  description = "Scrolling your records in real-time"
+  author = "Vinyl Scrobbler"
+  github = "https://github.com/russmckendrick/vinyl-scrobbler"
+  appStoreURL = "https://github.com/russmckendrick/vinyl-scrobbler/releases/latest"
+  twitter = ""
+  image = "/images/og-image.jpg"
+  price = ""
+  currency = ""
+  keywords = ["vinyl records", "record collection", "music tracking", "vinyl management", "macOS app"]
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Docs"
+    url = "/docs/"
+    weight = 2
+  [[menu.main]]
+    name = "Privacy Policy"
+    url = "/privacy-policy/"
+    weight = 3
