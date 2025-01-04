@@ -60,6 +60,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-- Website: https://vinylscrobbler.com
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Twitter: [@VinylScrobbler](https://twitter.com/VinylScrobbler) 
+- Website: https://www.vinyl-scrobbler.app
+- GitHub: [@russmckendrick](https://github.com/russmckendrick)
