@@ -4,7 +4,14 @@
     <div class="hero-gradient">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-24">
             <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div class="text-center lg:text-left lg:col-span-6">
+                <div class="relative lg:col-span-6 flex items-center justify-center">
+                    <div class="vinyl-container w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96">
+                        <div class="vinyl-record">
+                            <div class="vinyl-label"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center lg:text-left lg:col-span-6 mt-8 lg:mt-0">
                     <h1 class="px-4 sm:px-0">
                         <span class="block text-2xl sm:text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
                             <span class="block text-white">{{ .Params.headline }}</span>
@@ -18,13 +25,6 @@
                             <a href="{{ .Params.button.href }}" class="w-full inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-medium rounded-lg text-white hover:bg-white hover:bg-opacity-10 transition-colors duration-200">
                                 {{ .Params.button.text }}
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative mt-8 lg:mt-0 lg:col-span-6 flex items-center justify-center">
-                    <div class="vinyl-container w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96">
-                        <div class="vinyl-record">
-                            <div class="vinyl-label"></div>
                         </div>
                     </div>
                 </div>
