@@ -1,1 +1,2 @@
-<link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css"> 
+{{ $fa := resources.Get "node_modules/@fortawesome/fontawesome-free/css/all.min.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $fa.RelPermalink }}" integrity="{{ $fa.Data.Integrity }}">

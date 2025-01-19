@@ -7,7 +7,7 @@
     "dev:hugo": "hugo server --disableFastRender",
     "dev": "npm-run-all --parallel dev:*",
     "build:css": "tailwindcss -i ./themes/vinyl-scrobbler/assets/css/main.css -o ./themes/vinyl-scrobbler/assets/css/style.css --minify",
-    "build:fa": "mkdir -p themes/vinyl-scrobbler/static/node_modules/@fortawesome/fontawesome-free/css && cp -r node_modules/@fortawesome/fontawesome-free/css/all.min.css themes/vinyl-scrobbler/static/node_modules/@fortawesome/fontawesome-free/css/ && cp -r node_modules/@fortawesome/fontawesome-free/webfonts themes/vinyl-scrobbler/static/node_modules/@fortawesome/fontawesome-free/",
+    "build:fa": "mkdir -p themes/vinyl-scrobbler/assets/node_modules/@fortawesome/fontawesome-free/css && cp -r node_modules/@fortawesome/fontawesome-free/css/all.min.css themes/vinyl-scrobbler/assets/node_modules/@fortawesome/fontawesome-free/css/ && cp -r node_modules/@fortawesome/fontawesome-free/webfonts themes/vinyl-scrobbler/assets/node_modules/@fortawesome/fontawesome-free/",
     "build": "npm run build:css && npm run build:fa && hugo --minify"
   },
   "keywords": [],
