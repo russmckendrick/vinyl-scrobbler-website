@@ -1,31 +1,57 @@
-baseURL = 'https://vinyl-scrobbler.app/'
-languageCode = 'en-BG'
+baseURL = 'https://www.vinyl-scrobbler.app/'
+languageCode = 'en-us'
 title = 'Vinyl Scrobbler'
-theme = 'vinyl-theme'
-
-enableRobotsTXT = true
-enableGitInfo = false
+theme = 'vinyl-scrobbler'
 
 [params]
-  description = "Scrolling your records in real-time"
-  author = "Vinyl Scrobbler"
-  github = "https://github.com/russmckendrick/vinyl-scrobbler"
-  appStoreURL = "https://github.com/russmckendrick/vinyl-scrobbler/releases/latest"
-  twitter = ""
-  image = "/images/og-image.jpg"
-  price = ""
-  currency = ""
-  keywords = ["vinyl records", "record collection", "music tracking", "vinyl management", "macOS app"]
+  description = "A powerful macOS menu bar application that helps you scrobble your vinyl collection to LastFM"
+  mainSections = ["docs", "privacy-policy"]
+  
+  [params.app]
+    appStoreLink = "https://apps.apple.com/gb/app/vinyl-scrobbler/id6740146205"
+    githubLink = "https://github.com/russmckendrick/vinyl-scrobbler"
 
-[sitemap]
-  changefreq = "weekly"
-  priority = 0.5
+  [params.features]
+    enableDarkMode = true
+    enableAnimations = true
 
-[markup]
-  [markup.highlight]
-    noClasses = false
-  [markup.goldmark.renderer]
-    unsafe = true
+  [params.social]
+    github = "https://github.com/russmckendrick/vinyl-scrobbler"
+    lastfm = "https://last.fm"
+
+  [params.footer]
+    aboutText = "A powerful macOS menu bar application that helps you scrobble your vinyl collection to LastFM."
+    copyrightText = "Vinyl Scrobbler"
+    
+    [[params.footer.quickLinks]]
+      name = "Home"
+      url = "/"
+    
+    [[params.footer.quickLinks]]
+      name = "Docs"
+      url = "/docs/"
+    
+    [[params.footer.quickLinks]]
+      name = "Privacy Policy"
+      url = "/privacy-policy/"
+    
+    [[params.footer.connect]]
+      name = "GitHub"
+      url = "https://github.com/russmckendrick/vinyl-scrobbler"
+      icon = "fa-brands fa-github"
+      alt = "Visit the Vinyl Scrobbler GitHub repository"
+    
+    [[params.footer.connect]]
+      name = "Last.fm"
+      url = "https://last.fm"
+      icon = "fa-brands fa-lastfm"
+      alt = "Visit Last.fm"
+    
+    [[params.footer.connect]]
+      name = "Discogs"
+      url = "https://discogs.com"
+      icon = "fa-solid fa-record-vinyl"
+      alt = "Visit Discogs"
 
 [menu]
   [[menu.main]]
@@ -40,3 +66,12 @@ enableGitInfo = false
     name = "Privacy Policy"
     url = "/privacy-policy/"
     weight = 3
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[build]
+  writeStats = true

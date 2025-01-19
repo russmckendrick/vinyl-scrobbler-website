@@ -1,0 +1,22 @@
+{{ $type := .Get "type" | default "info" }}
+{{ $title := .Get "title" | default (title $type) }}
+
+<div class="alert alert-{{ $type }}">
+    {{ if eq $type "danger" }}
+    <i class="fa-solid fa-circle-exclamation alert-icon"></i>
+    {{ else if eq $type "success" }}
+    <i class="fa-solid fa-circle-check alert-icon"></i>
+    {{ else if eq $type "warning" }}
+    <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
+    {{ else if eq $type "important" }}
+    <i class="fa-solid fa-circle-exclamation alert-icon"></i>
+    {{ else if eq $type "tip" }}
+    <i class="fa-regular fa-lightbulb alert-icon"></i>
+    {{ else }}
+    <i class="fa-regular fa-circle-info alert-icon"></i>
+    {{ end }}
+    <div class="flex-1">
+        {{ with $title }}<strong>{{ . }}</strong>{{ end }}
+        {{ .Inner | markdownify }}
+    </div>
+</div>

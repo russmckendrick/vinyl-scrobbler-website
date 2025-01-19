@@ -167,6 +167,6 @@ If you have any questions about this Privacy Policy, You can contact us:
 
 - By email: privacy@vinyl-scrobbler.app
 
-{{< alert type="info" title="Info" >}}
-<br>This Privacy Policy has been created with the help of the [Free Privacy Policy Generator](https://www.freeprivacypolicy.com/free-privacy-policy-generator/).
-{{< /alert >}}
+{{<alert type="info" title="Note">}}
+This Privacy Policy has been created with the help of the [Free Privacy Policy Generator](https://www.freeprivacypolicy.com/free-privacy-policy-generator/).
+{{</alert>}}

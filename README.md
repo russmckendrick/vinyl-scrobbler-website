@@ -1,64 +1,63 @@
-# Vinyl Scrobbler Website
+# 🎵 Vinyl Scrobbler Website
 
-This is the official website for Vinyl Scrobbler, a macOS application for tracking and sharing your vinyl record collection.
+This is the official website for Vinyl Scrobbler - a powerful macOS menu bar application that helps you scrobble your vinyl collection to LastFM. 🎧
 
-## Technology Stack
+## 🌐 Website
 
-- Hugo - Static Site Generator
-- TailwindCSS - Utility-first CSS framework
-- Custom Theme - Modern, responsive design
+The website is built using [Hugo](https://gohugo.io/) and is available at [vinyl-scrobbler.app](https://www.vinyl-scrobbler.app/). ✨
 
-## Development
+## 📱 Download the app
 
-### Prerequisites
+[![Download on the Mac App Store](https://camo.githubusercontent.com/784f1e003a55a4515989ed4695273cc824ca15bbd08fe464de34334fadabf557/68747470733a2f2f746f6f6c626f782e6d61726b6574696e67746f6f6c732e6170706c652e636f6d2f6170692f76322f6261646765732f646f776e6c6f61642d6f6e2d7468652d6170702d73746f72652f626c61636b2f656e2d75733f72656c65617365446174653d31373336333830383030)](https://apps.apple.com/gb/app/vinyl-scrobbler/id6740146205)
 
-- Hugo (latest version)
-- Node.js and npm
-- Git
+## 🛠️ Development
 
-### Local Development
+This website is built using:
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/vinyl-scrobbler-website.git
-cd vinyl-scrobbler-website
-```
+- 🚀 [Hugo](https://gohugo.io/) - Static site generator
+- 🎨 [TailwindCSS](https://tailwindcss.com/) - CSS framework
+- ✨ [Font Awesome](https://fontawesome.com/) - Icons
 
-2. Install dependencies:
+### ⚙️ Prerequisites
+
+- 📦 Node.js
+- 🏗️ Hugo
+
+### 💻 Local Development
+
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Start the development server:
+2. Run development server:
 ```bash
-hugo server -D
+npm run dev
 ```
 
-The site will be available at `http://localhost:1313`
+This will start:
+- 🔄 Hugo development server
+- 👀 TailwindCSS watcher
 
-### Building
+### 🏗️ Building
 
 To build the site for production:
 
 ```bash
-hugo --minify
+npm run build
 ```
 
-The built site will be in the `public` directory.
+This command will:
+1. 🎨 Build and minify CSS
+2. 📦 Copy Font Awesome assets
+3. 🚀 Build and minify Hugo site
 
-## Contributing
+## 🔗 Links
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- 💻 [GitHub Repository](https://github.com/russmckendrick/vinyl-scrobbler)
+- 🎵 [Last.fm](https://last.fm)
+- 💿 [Discogs](https://discogs.com)
 
-## License
+## 👤 Author
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-- Website: https://www.vinyl-scrobbler.app
-- GitHub: [@russmckendrick](https://github.com/russmckendrick)
+Russ McKendrick 🎸

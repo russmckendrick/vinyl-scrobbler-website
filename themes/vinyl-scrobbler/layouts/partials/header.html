@@ -1,0 +1,105 @@
+<header class="absolute top-0 left-0 right-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-6">
+            <div class="flex items-center">
+                <a href="/" class="text-2xl font-bold text-white">
+                    Vinyl Scrobbler
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="nav-link">
+                    {{ .Name }}
+                </a>
+                {{ end }}
+                <a href="{{ .Site.Params.app.appStoreLink }}" class="nav-button px-4 py-2 rounded-lg font-medium transition-all duration-200">
+                    Download Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button type="button" class="mobile-menu-button p-2 transition-colors duration-200" aria-label="Toggle menu">
+                    <svg class="h-6 w-6 text-white scroll-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden">
+                <div id="mobile-menu" class="hidden px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                    {{ range .Site.Menus.main }}
+                    <a href="{{ .URL }}" class="block px-3 py-2 text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md">
+                        {{ .Name }}
+                    </a>
+                    {{ end }}
+                    <div class="px-3 py-2">
+                        <a href="{{ .Site.Params.app.appStoreLink }}" class="nav-button block text-center px-4 py-2 rounded-lg font-medium transition-all duration-200">
+                            Download Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+
+// Add scroll effect to header
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const scrolled = window.scrollY > 0;
+    
+    if (scrolled) {
+        header.classList.add('bg-white', 'dark:bg-gray-800', 'shadow-lg', 'fixed');
+        header.classList.remove('absolute');
+        
+        // Update nav links
+        document.querySelectorAll('header .nav-link').forEach(link => {
+            link.classList.remove('text-white');
+            link.classList.add('text-gray-600', 'dark:text-gray-300', 'hover:text-gray-900', 'dark:hover:text-white');
+        });
+        
+        // Update site title
+        document.querySelector('header a.text-2xl').classList.remove('text-white');
+        document.querySelector('header a.text-2xl').classList.add('text-gray-900', 'dark:text-white');
+        
+        // Update mobile menu icon
+        document.querySelector('.mobile-menu-button svg').classList.remove('text-white');
+        document.querySelector('.mobile-menu-button svg').classList.add('text-gray-900', 'dark:text-white');
+        
+        // Update download button
+        document.querySelector('header .nav-button').classList.remove('text-white', 'bg-white', 'bg-opacity-10');
+        document.querySelector('header .nav-button').classList.add('text-white', 'bg-primary', 'hover:bg-primary/90');
+    } else {
+        header.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow-lg', 'fixed');
+        header.classList.add('absolute');
+        
+        // Update nav links
+        document.querySelectorAll('header .nav-link').forEach(link => {
+            link.classList.add('text-white');
+            link.classList.remove('text-gray-600', 'dark:text-gray-300', 'hover:text-gray-900', 'dark:hover:text-white');
+        });
+        
+        // Update site title
+        document.querySelector('header a.text-2xl').classList.add('text-white');
+        document.querySelector('header a.text-2xl').classList.remove('text-gray-900', 'dark:text-white');
+        
+        // Update mobile menu icon
+        document.querySelector('.mobile-menu-button svg').classList.add('text-white');
+        document.querySelector('.mobile-menu-button svg').classList.remove('text-gray-900', 'dark:text-white');
+        
+        // Update download button
+        document.querySelector('header .nav-button').classList.add('text-white', 'bg-white', 'bg-opacity-10');
+        document.querySelector('header .nav-button').classList.remove('text-white', 'bg-primary', 'hover:bg-primary/90');
+    }
+});
+</script>
+
+</nav>
+</header>

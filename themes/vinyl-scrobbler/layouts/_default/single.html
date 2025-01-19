@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="bg-gradient-to-br from-primary to-secondary min-h-screen">
+    <!-- Header Section -->
+    <div class="pt-32 pb-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{{ .Title }}</h1>
+        <p class="text-xl text-white opacity-90">{{ .Description }}</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <!-- Content Section -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8">
+            <div class="prose prose-alerts dark:prose-invert max-w-none">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
